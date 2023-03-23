@@ -1,0 +1,5 @@
+_type: prompt
+input_variables:
+    ["situation"]
+template: 
+    What should I do in situation: {situation}
