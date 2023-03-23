@@ -21,7 +21,10 @@ class Think():
     
     def inner_situation(self, situation) -> dict:
         json_data = self.inner_chain.run(situation)
-        return json.loads(json_data)
+        # thoughts, feelings, actions
+        data = json.loads(json_data)
+        thoughts, feelings, actions = data["thoughts"], data["feelings"], data["actions"]
+        return thoughts, feelings, actions
     
     def outer_situation(self, situation) -> dict:
         json_data = self.outer_chain.run(situation)

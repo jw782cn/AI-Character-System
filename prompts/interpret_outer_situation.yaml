@@ -1,0 +1,5 @@
+_type: prompt
+input_variables:
+    ["situation", "long_term_memory", "short_term_memory", "feelings", "charactaristics", "actions"]
+template: 
+    What should I do in situation: {situation}
