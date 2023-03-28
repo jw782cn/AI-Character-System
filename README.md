@@ -52,6 +52,6 @@
 - 行动 Action
 - 环境 Environment
 
-![AI system design](images/AI system design.jpeg)
+![image](images/AI%20system%20design.jpeg)
 
 ……正在构建中……
