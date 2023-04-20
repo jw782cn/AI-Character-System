@@ -1,57 +1,48 @@
 # AI Character System
  A true AI that can chat with you with "self-awareness".
 
-# 类人机器人
+## Human-like Robot
+💥 Imagine that with every frame, you are experiencing memory loss. You need to assess the surrounding situation, recall some memories, and feel emotions in order to properly impersonate yourself in the present moment...
+Origin
+The idea of creating a personalized robot came from the observation that current AI conversations still don't feel like interacting with a real intelligent assistant, such as Jarvis, TARS from Interstellar, or MOSS from Wandering Earth. After much contemplation, I realized that some of the main reasons are:
 
-<aside> 💥 想象你每一帧都在失忆，你需要判断周围情景、想起一些记忆、感受一些情绪，才能正确的伪装现在这一帧的你……
+## Interaction
+AI doesn't initiate conversations
+AI can't receive multiple messages at once
+AI doesn't respond to multiple messages
+Thinking
+AI doesn't think proactively
+AI has no other motives (besides answering user input)
+AI lacks life experiences
+AI has no concept of time (no perception of time passing)
+AI's responses don't vary based on personality, experiences, or immediate feelings, and only rely on context
+...
 
-</aside>
+Of course, there are more reasons, but addressing these simple ones could make the AI feel more like a real person, or a flesh-and-blood AI. To achieve this, the following questions need to be addressed:
 
-# 起因
+How to respond like a human?
+How to make AI perceive the passage of time?
+How to make AI aware of self-consciousness?
+How to make AI think proactively?
+...
 
-想制作个性化机器人的起因是，竞轩说现在的AI对话，依然很不像跟真正的智能助手交互，比如贾维斯、星际穿越的Tars、流浪地球的MOSS。我结合自身深思很久，其中很大的原因有这些：
+Considering the current GPT-4 technology, large language models have fixed token input limits. It seems there is not much room for improvement in achieving smooth conversation by incorporating context. However, I realized that when making a decision, having an idea, or expressing something, it's often not solely based on context understanding but also on the contemplation of the situation, recalling memories, understanding experiences, spontaneous thinking, decision-making systems, and the combined output of immediate feelings. In other words, using the above content as input could potentially achieve human-like feedback in certain situations. This can be described as:
 
-- 交互
-  - AI不会主动说话
-  - AI不能同时接收多条信息
-  - AI不会回复多条信息
-- 思考
-  - AI不会主动思考
-  - AI没有（除了回答用户输入）的其他动机
-  - AI没有任何人生经历
-  - AI没有时间观念（对时间流逝没有感知能力）
-  - AI的回复不会因为性格、经历、体验、即时感受变化，仅依赖上下文
+You are a person who loses their memory every second. How you respond to the world and the people around you depends on the surrounding situation you observe, the memories you recall, and the information you use to pretend you haven't lost your memory in order to think and respond to the world. Your life consists of continuous frames, each one a new self, and you will have unique reactions in each frame, which will change the world and yourself. However, you cannot perceive the past or the future. Suppose you are using your phone; you need to be aware that you are walking in a noisy, crowded city (situation), know who you are talking to (situation), understand your emotions, assume you are happy (emotion), and be aware of your relationship with the person you are talking to, what you have done together, and the previous conversation topics (memory). At this point, you can deduce what you should reply to them.
 
-……
+We all know that GPT is good at simulating situations and reasoning out answers. In theory, as long as the information provided is accurate, GPT can be used to simulate a person's thought process.
 
-当然还有更多的原因，但是目前这些简单的原因解决了，就能很大程度上感觉对方是一个真实的人，或者说有血有肉的AI。则需要解决以下问题：
+Let's break down the essential frame needed for a response:
 
-- 如何像人类一样回复？
-- 如何让AI感知时间流逝？
-- 如何让AI感知自我意识？
-- 如何让AI主动思考？
+## Design
+In my system design, I include my observations of my usual thought processes to derive a possible flow of thoughts.
 
-……
-
-就目前的GPT4技术而言，大语言模型都是有固定的tokens输入限制，似乎将上下文放进去，来达到流畅聊天的水平，似乎已经没有更多空间了。但是我意识到，当我做出某个决定、某个想法、打出某些语言的时候，很大程度并不是基于上下文理解，更多是的对于情景的思考、对于记忆的调用、对于体验的理解、自发性的思考、决策系统、即时感受的综合输出，也就是说，如果使用以上的内容作为输入，似乎能够实现对于某种情境的类人类模拟反馈。可以描述为这样：
-
-> 你是一个每过一秒就会失忆的人。你如何对世界、周围人进行反馈，取决于你观察到的周围情景、你调用出来的记忆，你可以通过一些信息来伪装自己，假装你没有失忆，来进行思考、对世界回复。你的生命就是一帧一帧的连续片段，每一帧都是新的自我，你将在每一帧做出独有的反应，而你做的反应会改变世界、改变自我。但你无法感知过去和未来。 假设你正在玩手机，你需要意识到你正在一个拥挤嘈杂的城市中走路，走在多少街（情景），你需要意识到你正在聊天的人（情景），你需要知道你的情感，假设现在很开心（情感），你需要知道你正在聊天的人跟你有什么关系、你们一起做了什么、和之前在聊的话题（记忆），这个时候你推理出现在你应该回复ta某种内容。
-
-然而我们都知道，GPT很擅长对情景进行模拟，并推理出回答。理论上，只要给的信息正确，可以使用GPT来模拟出一个人的思考过程。
-
-不妨分解一下这重要的一帧，你做出反应所需要的信息。
-
-# 设计
-
-我的系统设计中，包含了我对我平时思考过程的观察，来总结出一种可能的思绪流程。
-
-- 情景 Situation
-- 感受 Feeling
-- 记忆 Memory
-- 思考 Think
-- 行动 Action
-- 环境 Environment
-
+- Situation
+- Feeling
+- Memory
+- Think
+- Action
+- Environment
 ![image](images/AI%20system%20design.jpeg)
 
-……正在构建中……
+……Under construction……
